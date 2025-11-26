@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangireddy Rajasekhar Reddy - Portfolio</title>
+    <meta name="description" content="Full stack developer portfolio of Gangireddy Rajasekhar Reddy">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo" aria-label="Back to homepage">
+                    <i data-lucide="code" class="text-primary"></i>
+                    <span>Gangireddy Rajasekhar Reddy</span>
+                </a>
+
+                <nav class="nav-desktop">
+                    <ul class="flex items-center gap-8">
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#work" class="nav-link">Projects</a></li>
+                        <li><a href="#about" class="nav-link">Skills</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-btn">
+                    <button class="btn btn-ghost btn-icon" id="menu-toggle" aria-label="Open menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="/" class="logo">
+                <i data-lucide="code" class="text-primary"></i>
+                <span>Gangireddy R.</span>
+            </a>
+            <button class="btn btn-ghost btn-icon" id="menu-close" aria-label="Close menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#work" class="mobile-nav-link">Projects</a>
+            <a href="#about" class="mobile-nav-link">Skills</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div style="z-index: 10;">
+                        <h1 class="hero-title">
+                            Gangireddy Rajasekhar Reddy
+                        </h1>
+                        <p class="hero-subtitle">
+                            Full stack developer
+                        </p>
+                        <p class="hero-description">
+                            Around 2 years of experience building scalable web applications using .NET Core, Angular,
+                            and SQL. Skilled in backend, frontend, and API integrations, I enjoy debugging,
+                            collaborating with teams, and delivering clean, maintainable code. Based in Narasaraopet,
+                            I’m passionate about learning new technologies and solving real-world problems.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4" style="display: flex; gap: 1rem;">
+                            <a href="#contact" class="btn btn-primary btn-lg">
+                                Contact Me
+                                <i data-lucide="arrow-right"
+                                    style="margin-left: 0.5rem; width: 1.25rem; height: 1.25rem;"></i>
+                            </a>
+                            <a href="Gangireddy-Rajasekhar-Reddy-Resume.pdf"
+                                download="Gangireddy-Rajasekhar-Reddy-Resume.pdf" class="btn btn-secondary btn-lg">
+                                <i data-lucide="download"
+                                    style="margin-right: 0.5rem; width: 1.25rem; height: 1.25rem;"></i>
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                    <div class="justify-center flex">
+                        <div class="hero-image-container">
+                            <img src="my-photo.png" alt="A portrait of Gangireddy Rajasekhar Reddy." class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Skills) -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2 class="section-title">
+                        <i data-lucide="code" class="text-primary" style="width: 2rem; height: 2rem;"></i>
+                        Technical Skills
+                    </h2>
+                    <p class="section-description">
+                        A summary of my technical capabilities and the technologies I work with.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Backend -->
+                    <div class="card">
+                        <h3 class="card-title">Backend</h3>
+                        <div class="flex" style="flex-wrap: wrap; gap: 0.75rem;">
+                            <span class="badge badge-outline">.NET 6/7/8</span>
+                            <span class="badge badge-outline">.NET Core</span>
+                            <span class="badge badge-outline">ASP.NET Core</span>
+                            <span class="badge badge-outline">MVC</span>
+                            <span class="badge badge-outline">C#</span>
+                            <span class="badge badge-outline">Java</span>
+                            <span class="badge badge-outline">Python(basics)</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="card">
+                        <h3 class="card-title">Frontend</h3>
+                        <div class="flex" style="flex-wrap: wrap; gap: 0.75rem;">
+                            <span class="badge badge-outline">Angular v13+ (basics)</span>
+                            <span class="badge badge-outline">JavaScript</span>
+                            <span class="badge badge-outline">HTML</span>
+                            <span class="badge badge-outline">CSS</span>
+                            <span class="badge badge-outline">React.js (learning)</span>
+                        </div>
+                    </div>
+
+                    <!-- Database & APIs -->
+                    <div class="card">
+                        <h3 class="card-title">Database & APIs</h3>
+                        <div class="flex" style="flex-wrap: wrap; gap: 0.75rem;">
+                            <span class="badge badge-outline">MongoDB (learning)</span>
+                            <span class="badge badge-outline">SQL Server 2019</span>
+                            <span class="badge badge-outline">MySQL</span>
+                            <span class="badge badge-outline">RESTful APIs</span>
+                            <span class="badge badge-outline">Authentication</span>
+                            <span class="badge badge-outline">Integrations</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools, Cloud & Concepts -->
+                    <div class="card">
+                        <h3 class="card-title">Tools, Cloud & Concepts</h3>
+                        <div class="flex" style="flex-wrap: wrap; gap: 0.75rem;">
+                            <span class="badge badge-outline">Git</span>
+                            <span class="badge badge-outline">GitHub</span>
+                            <span class="badge badge-outline">Jenkins</span>
+                            <span class="badge badge-outline">Docker</span>
+                            <span class="badge badge-outline">Maven</span>
+                            <span class="badge badge-outline">Tomcat</span>
+                            <span class="badge badge-outline">VS Code</span>
+                            <span class="badge badge-outline">Visual Studio</span>
+                            <span class="badge badge-outline">Excel</span>
+                            <span class="badge badge-outline">Tableau(basics)</span>
+                            <span class="badge badge-outline">Azure (Basics)</span>
+                            <span class="badge badge-outline">AWS (EC2, S3, IAM)</span>
+                            <span class="badge badge-outline">OOP</span>
+                            <span class="badge badge-outline">LINQ</span>
+                            <span class="badge badge-outline">SOLID</span>
+                            <span class="badge badge-outline">SDLC</span>
+                            <span class="badge badge-outline">Agile</span>
+                            <span class="badge badge-outline">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding bg-secondary-20">
+            <div class="container">
+                <h2 class="section-title text-center text-primary" style="margin-bottom: 4rem;">
+                    Work Experience
+                </h2>
+
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-left">
+                            <div class="timeline-card">
+                                <h3 class="card-title" style="margin-bottom: 0.25rem;">Associate Engineer</h3>
+                                <p class="text-muted-foreground font-medium" style="margin-bottom: 0.5rem;">Nagarro
+                                    Software Pvt Ltd</p>
+                                <p class="text-muted-foreground" style="font-size: 0.875rem;">Developed backend services
+                                    using .NET Core, C#, and SQL Server, improving performance and scalability. Built
+                                    and maintained stored procedures, SQL queries, and optimized data models for auction
+                                    workflows. Worked with Angular and JavaScript to enhance UI components and improve
+                                    user experience. Integrated RESTful APIs for system communication and data
+                                    synchronization across modules. Provided production support by debugging issues,
+                                    analyzing logs, and resolving incidents quickly. Identified root causes, documented
+                                    fixes, and suggested improvements for system stability. Followed Git workflows using
+                                    feature branches, pull requests, and code reviews.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-icon">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+
+                        <div class="timeline-right">
+                            <p class="text-muted-foreground font-medium" style="font-size: 1.125rem;">March 2022 -
+                                September 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section (Projects) -->
+        <section id="work" class="section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2 class="section-title">
+                        Featured Projects
+                    </h2>
+                    <p class="section-description">
+                        A selection of projects that showcase my skills in web development and problem-solving.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Project 1 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhdXRvbW90aXZlJTIwdGVjaHxlbnwwfHx8fDE3MjE0MDgzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                                    alt="Manheim Canada Operating Engine" class="project-image">
+                                <div class="project-overlay">
+                                    <h3 class="card-title" style="color: white; margin: 0; font-size: 1.5rem;">Manheim
+                                        Canada Operating Engine</h3>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="card-title" style="color: inherit; margin-bottom: 0.5rem;">Manheim Canada
+                                    Operating Engine</h3>
+                                <p style="font-size: 0.875rem; opacity: 0.8; margin-bottom: 1rem;">A comprehensive
+                                    platform for managing vehicle auction workflows.</p>
+
+                                <div style="margin-bottom: 1rem;">
+                                    <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Technologies Used:</h4>
+                                    <div class="flex" style="flex-wrap: wrap; gap: 0.5rem;">
+                                        <span class="badge badge-default">.NET Core</span>
+                                        <span class="badge badge-default">C#</span>
+                                        <span class="badge badge-default">SQL Server</span>
+                                        <span class="badge badge-default">Angular</span>
+                                        <span class="badge badge-default">JavaScript</span>
+                                        <span class="badge badge-default">RESTful APIs</span>
+                                        <span class="badge badge-default">Git</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Responsibilities:</h4>
+                                    <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" style="width: 1rem; height: 1rem; opacity: 0.8;"></i>
+                                            <span style="font-size: 0.875rem; opacity: 0.8;">Developed backend services
+                                                using .NET Core, C#, and SQL Server.</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" style="width: 1rem; height: 1rem; opacity: 0.8;"></i>
+                                            <span style="font-size: 0.875rem; opacity: 0.8;">Built and maintained stored
+                                                procedures and SQL queries.</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" style="width: 1rem; height: 1rem; opacity: 0.8;"></i>
+                                            <span style="font-size: 0.875rem; opacity: 0.8;">Worked with Angular and
+                                                JavaScript to enhance UI components.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="https://images.unsplash.com/photo-1514575110897-1253ff7b2ccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzYzNzcyMzg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                                    alt="Result Management Application" class="project-image">
+                                <div class="project-overlay">
+                                    <h3 class="card-title" style="color: white; margin: 0; font-size: 1.5rem;">Result
+                                        Management Application</h3>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="card-title" style="color: inherit; margin-bottom: 0.5rem;">Result Management
+                                    Application</h3>
+                                <p style="font-size: 0.875rem; opacity: 0.8; margin-bottom: 1rem;">Built a responsive
+                                    student result management portal.</p>
+
+                                <div style="margin-bottom: 1rem;">
+                                    <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Technologies Used:</h4>
+                                    <div class="flex" style="flex-wrap: wrap; gap: 0.5rem;">
+                                        <span class="badge badge-default">ASP.NET Core</span>
+                                        <span class="badge badge-default">Angular</span>
+                                        <span class="badge badge-default">JavaScript</span>
+                                        <span class="badge badge-default">HTML/CSS</span>
+                                        <span class="badge badge-default">SQL Server</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Responsibilities:</h4>
+                                    <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" style="width: 1rem; height: 1rem; opacity: 0.8;"></i>
+                                            <span style="font-size: 0.875rem; opacity: 0.8;">Built a responsive student
+                                                result management portal.</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" style="width: 1rem; height: 1rem; opacity: 0.8;"></i>
+                                            <span style="font-size: 0.875rem; opacity: 0.8;">Implemented secure login
+                                                and CRUD operations.</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i data-lucide="check" style="width: 1rem; height: 1rem; opacity: 0.8;"></i>
+                                            <span style="font-size: 0.875rem; opacity: 0.8;">Designed REST APIs and
+                                                integrated them with the UI.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <h2 class="section-title text-primary">
+                        Get In Touch
+                    </h2>
+                    <p class="section-description">
+                        Have a project in mind, want to collaborate, or just want to say hi?
+                        <br>
+                        My inbox is always open.
+                    </p>
+
+                    <div class="contact-grid">
+                        <div class="contact-link">
+                            <i data-lucide="mail" class="text-primary"></i>
+                            <a href="mailto:rajasekharreddy681@gmail.com">rajasekharreddy681@gmail.com</a>
+                        </div>
+                        <div class="contact-link">
+                            <i data-lucide="phone" class="text-primary"></i>
+                            <a href="tel:+918121800854">+91 8121800854</a>
+                        </div>
+                        <div class="contact-link">
+                            <i data-lucide="linkedin" class="text-primary"></i>
+                            <a href="https://www.linkedin.com/in/gangireddy-rajasekhar-reddy-405a82216" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <div id="success-message" class="success-message">
+                        <i data-lucide="check-circle" class="text-primary"
+                            style="width: 4rem; height: 4rem; margin: 0 auto 1rem;"></i>
+                        <h3 class="card-title" style="font-size: 1.5rem;">Message Sent!</h3>
+                        <p class="text-muted-foreground">Thank you for your message. I'll get back to you soon.</p>
+                        <button class="btn btn-primary" style="margin-top: 1.5rem;" onclick="resetForm()">Send Another
+                            Message</button>
+                    </div>
+
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5"
+                                placeholder="Your message..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Send Message
+                                <i data-lucide="send" style="margin-left: 0.5rem; width: 1rem; height: 1rem;"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="/" class="logo" aria-label="Back to homepage">
+                    <i data-lucide="code" class="text-primary"></i>
+                    <span>Gangireddy Rajasekhar Reddy</span>
+                </a>
+                <p class="text-muted-foreground" style="font-size: 0.875rem;">
+                    © <span id="year"></span> Gangireddy Rajasekhar Reddy. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
