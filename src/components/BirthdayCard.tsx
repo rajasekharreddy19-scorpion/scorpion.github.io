@@ -52,7 +52,7 @@ export function BirthdayCard() {
           <div className="grid items-start gap-8 md:grid-cols-2">
             <div className="flex flex-col items-center space-y-6 text-center">
               {girlfriendPhoto && (
-                <div className="group relative aspect-[3/4] w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
+                <div className="group relative aspect-square w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
                   <Image
                     src={girlfriendPhoto.imageUrl}
                     alt={girlfriendPhoto.description}
