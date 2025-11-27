@@ -1,20 +1,36 @@
 
 'use client';
 
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 import Image from 'next/image';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Heart, Sparkles, Star} from 'lucide-react';
+import {Heart, Sparkles, Star, Upload} from 'lucide-react';
 import Confetti from './Confetti';
 import {PlaceHolderImages} from '@/lib/placeholder-images';
 import {ComplimentGenerator} from './ComplimentGenerator';
+import { Input } from '@/components/ui/input';
 
 export function BirthdayCard() {
   const [isOpen, setIsOpen] = useState(false);
-  const girlfriendPhoto = PlaceHolderImages.find(
+  const girlfriendPhotoDefault = PlaceHolderImages.find(
     img => img.id === 'girlfriend-photo'
   );
+  const [girlfriendPhotoUrl, setGirlfriendPhotoUrl] = useState(girlfriendPhotoDefault?.imageUrl);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setGirlfriendPhotoUrl(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
 
   if (!isOpen) {
     return (
@@ -51,15 +67,15 @@ export function BirthdayCard() {
         <Card className="p-4 shadow-2xl md:p-8 bg-card rounded-2xl">
           <div className="grid items-start gap-8 md:grid-cols-2">
             <div className="flex flex-col items-center space-y-6 text-center">
-              {girlfriendPhoto && (
+              {girlfriendPhotoUrl && (
                 <div className="group relative aspect-square w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
                   <Image
-                    src={girlfriendPhoto.imageUrl}
-                    alt={girlfriendPhoto.description}
+                    src={girlfriendPhotoUrl}
+                    alt={girlfriendPhotoDefault?.description || 'Birthday photo'}
                     fill
                     style={{objectFit: 'cover'}}
                     className="transform transition-transform duration-500 group-hover:scale-110"
-                    data-ai-hint={girlfriendPhoto.imageHint}
+                    data-ai-hint={girlfriendPhotoDefault?.imageHint}
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -68,6 +84,19 @@ export function BirthdayCard() {
                   </div>
                 </div>
               )}
+               <div className='flex gap-2'>
+                <Button onClick={() => fileInputRef.current?.click()} variant="outline">
+                  <Upload className="mr-2 h-4 w-4" />
+                  Update Photo
+                </Button>
+                <Input
+                  type="file"
+                  ref={fileInputRef}
+                  className="hidden"
+                  onChange={handleImageChange}
+                  accept="image/png, image/jpeg"
+                />
+              </div>
               <div className="flex gap-2 text-accent">
                 <Star /> <Star /> <Star /> <Star /> <Star />
               </div>
